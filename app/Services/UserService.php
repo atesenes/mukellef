@@ -20,9 +20,9 @@ class UserService
     {
         return $this->repo->firstQuery($query);
     }
-    public function get($id)
+    public function getData($id)
     {
-        return $this->repo->get($id);
+        return $this->repo->getData($id);
     }
 
 }

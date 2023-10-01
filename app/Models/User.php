@@ -42,7 +42,7 @@ class User extends Authenticatable
     }
     public function transactions()
     {
-        return $this->hasOne(Transaction::class);
+        return $this->hasOne(Transaction::class,'user_id','id');
     }
     /**
      * The attributes that should be cast.

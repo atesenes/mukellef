@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserStoreRequest;
-use App\Models\User;
-use App\Models\UserSubscription;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,8 +19,7 @@ class UserController extends Controller
     }
     public function info($id)
     {
-        return response()->json(['data'=>111],201);
-
+        return response()->json(['data'=>$this->user_service->getData($id)],201);
     }
 
     public function register()

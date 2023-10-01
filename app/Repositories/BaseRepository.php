@@ -8,7 +8,7 @@ class BaseRepository
 {
     protected $model;
 
-    public function get($id)
+    public function getData($id)
     {
         return $this->model::find($id);
     }
